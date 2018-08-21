@@ -4,6 +4,16 @@ var getEmail = document.getElementById('form-email');
 var getExtension = document.getElementById('form-extension');
 var getLocation = document.getElementById('location-select');
 var getTitle = document.getElementById('form-title');
+var modalClose = document.getElementById('modal-copy-button');
+var modalPara = document.querySelectorAll('.modal-p');
+
+modalClose.addEventListener('click', () => {
+    for (let para of modalPara) {
+        para.innerHTML = `test`;
+    } 
+});
+
+
 
 // on submit, if all fields are filled => do the following : return error
 

@@ -28,11 +28,6 @@ h1 {
 
 /* BUTTONS */
 
-button {
-    outline: 0;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 15px 0 rgba(0,0,0,0.19);
-}
-
 .btn-primary { 
     width: 50%;
     background-color: #002855;
@@ -47,9 +42,21 @@ button {
     outline: none;
 }
 
-#submit-button {
+#submit-button,
+#modal-copy-button {
     outline: none;
-    border: none
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 15px 0 rgba(0,0,0,0.19);
+}
+
+#submit-button:focus,
+#submit-button:link,
+#modal-copy-button:focus,
+#modal-copy-button:link  {
+    background-color: #002855;
+    border-color: rgba(201, 151, 0, 0.8);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 15px 0 rgba(0,0,0,0.19);
+    outline: 0 none;
 }
 
 /* BODY ELEMENTS */
@@ -98,3 +105,6 @@ input[type="title"]:focus,
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(201, 151, 0, 0.6);
     outline: 0 none;
 }
+
+/* MODAL */
+
