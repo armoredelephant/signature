@@ -10,13 +10,14 @@ html {
 body {
 	padding-top: 70px;
     height: 100%;
-    background-image: url("images/DesktopOne.png");
+    background-image: url("images/dots.png");
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */
 }
 
 h1 {
+    font-weight: 700;
     text-align: center;
     color: #c99700;
 }
