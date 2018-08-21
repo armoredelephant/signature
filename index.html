@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Keith Alleman">
+    <meta name="Description" content="form to create evicore outlook signature">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eviCore Signature</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="resources/styles.css">
+</head>
+<body>
+    <header class="container header-wrap">
+        <div class="row justify-content-center">
+            <div class="col-6 align">
+                <h1 id="heading">eviCore Signature</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container main-wrap">
+        <div class="center_div shadow-sm p-3 mb-5 rounded">
+            <form>
+                <div class="form-group form-row justify-content-between">
+                    <div class="col first-col">
+                        <div class="first-name">
+                                    <input type="text" class="form-control" id="form-first-name" aria-describedby="firstnameHelp" placeholder="First name" required>
+                        </div>
+                    </div>
+                    <div class="col last-col">
+                        <div class="last-name">
+                                <input type="text" class="form-control" id="form-last-name" aria-describedby="lastnameHelp" placeholder="Last name" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                <input type="email" class="form-control" id="form-email" aria-describedby="emailHelp" placeholder="Email" required>
+                </div>
+                <div class="form-group form-row">
+                <input type="extension" class="form-control" id="form-extension" placeholder="Extension" required>
+                </div>
+                <div class="form-group form-row">
+                    <select class="form-control" id="location-select" required>
+                        <option>Select your location</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="FL">FL</option>
+                        <option value="MO">MO</option>
+                        <option value="SC">SC</option>
+                        <option value="TN">TN</option>
+                    </select>
+                </div>
+                <div class="form-group form-row justify-content-center">
+                    <button type="submit" class="btn btn-primary mb-1" id="submit-button">Create signature</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
