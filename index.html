@@ -19,7 +19,7 @@
         </div>
     </header>
     <div class="container main-wrap">
-        <div class="center_div shadow p-3 mb-5 rounded">
+        <div class="center-div shadow p-3 mb-5 rounded">
             <form>
                 <div class="form-group form-row justify-content-between">
                     <div class="col first-col">
@@ -33,26 +33,43 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group form-row">
-                <input type="email" class="form-control" id="form-email" aria-describedby="emailHelp" placeholder="Email" required>
+                <div class="form-group form-row justify-content-between">
+                    <div class="col first-col">
+                        <div class="title">
+                                    <input type="text" class="form-control" id="form-title" aria-describedby="titleHelp" placeholder="Title" required>
+                        </div>
+                    </div>
+                    <div class="col last-col">
+                        <div class="extension">
+                                <input type="text" class="form-control" id="form-extension" aria-describedby="extensionHelp" placeholder="Extension" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="form-group form-row">
+                    <input type="title" class="form-control" id="form-title" aria-describedby="titleHelp" placeholder="Title" required>
                 </div>
                 <div class="form-group form-row">
-                <input type="extension" class="form-control" id="form-extension" placeholder="Extension" required>
-                </div>
-                <div class="form-group form-row">
-                    <select class="form-control" id="location-select" required>
-                        <option>Select your location</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="FL">Florida</option>
-                        <option value="MO">Missouri</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="TN">Tennessee</option>
-                    </select>
+                    <input type="email" class="form-control" id="form-email" aria-describedby="emailHelp" placeholder="Email" required>
+                </div> -->
+                <div class="form-group form-row justify-content-between">
+                    <div class="col first-col">
+                        <input type="email" class="form-control" id="form-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="col last-col">
+                        <select class="form-control" id="location-select" required>
+                            <option>Select your location</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="FL">Florida</option>
+                            <option value="MO">Missouri</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="TN">Tennessee</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group form-row justify-content-center">
-                    <button type="submit" class="btn btn-primary mb-1" id="submit-button">Create signature</button>
+                    <button type="submit" class="btn btn-primary mb-1" id="submit-button">Create</button>
                 </div>
             </form>
         </div>
