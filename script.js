@@ -4,18 +4,18 @@ const getEmail = document.getElementById('form-email');
 const getExtension = document.getElementById('form-extension');
 const getLocation = document.getElementById('location-select');
 const getTitle = document.getElementById('form-title');
-const modalClose = document.getElementById('modal-copy-button');
-const modalPara = document.querySelectorAll('.modal-p');
+const modalCopy = document.getElementById('modal-copy-button');
+const modalPara = document.querySelector('.modal-p');
 const submitBtn = document.getElementById('submit-button');
 
 submitBtn.addEventListener('click', () => {
     const address = checkLocation(getLocation.value);
-    modalPara[0].innerHTML = `<strong>${firstName.value} ${lastName.value}</strong>
+    modalPara.innerHTML = `<strong>${firstName.value} ${lastName.value}</strong>
                                 <br>
                                 ${getTitle.value}
                                 <br>
                                 <br>
-                                <strong>o:</strong> 800-918-8924 x ${getExtension.value}
+                                <strong>o:</strong> 800-918-8924 x${getExtension.value}
                                 <br>
                                 <strong>e:</strong> ${getEmail.value}
                                 <br>
@@ -33,53 +33,44 @@ submitBtn.addEventListener('click', () => {
         let officeLocal = '';
         switch (site) {
             case 'CA':
-            officeLocal = "1610 Arden Way, Suite 280 Sacramento, CA 95815";
+            officeLocal = "1610 Arden Way, Suite 280 &#149 Sacramento, CA 95815";
             break;
             case 'CO':
-            officeLocal = "1575 Garden of the Gods Rd., #200 Colorado Springs, CO 80907";
+            officeLocal = "1575 Garden of the Gods Rd., Suite 200 &#149 Colorado Springs, CO 80907";
             break;
             case 'CT':
-            officeLocal = "80 Springs Lane Plainville, CT 06062";
+            officeLocal = "80 Springs Lane &#149 Plainville, CT 06062";
             break;
             case 'FL':
-            officeLocal = "1420 S. Babcock St. Melbourne, FL 32901";
+            officeLocal = "1420 S. Babcock St. &#149 Melbourne, FL 32901";
             break;
             case 'MO':
-            officeLocal = "1 Express Way St. Louis, MO 63121";
+            officeLocal = "1 Express Way &#149 St. Louis, MO 63121";
             break;
             case 'SC':
-            officeLocal = "400 Buckwalter Place Blvd. Bluffton, SC 29910";
+            officeLocal = "400 Buckwalter Place Blvd. &#149 Bluffton, SC 29910";
             case 'TN':
-            officeLocal = "730 Cool Springs Blvd., Suite 800 Franklin, TN 37067";
+            officeLocal = "730 Cool Springs Blvd., Suite 800 &#149 Franklin, TN 37067";
             break;
             default:
-            officeLocal = "400 Buckwalter Place Blvd. Bluffton, SC 29910"
+            officeLocal = "400 Buckwalter Place Blvd. &#149 Bluffton, SC 29910"
         }
         return officeLocal
     }
 });
 
+modalCopy.addEventListener('click', () => {
+    copyToClipboard(modalPara.innerHTML);
+});
 
-
-// on submit, if all fields are filled => do the following : return error
-
-// create a modal at top of HDML and these <p> are currently empty.
-
-// Maybe use <br> and put the (5)paragraphs in one paragraph instead to make it work in copy/paste into signature
-
-// set a <p>[0].innerHTML = `${firstName.value} ${lastName.value}`
-
-// set a <p>[1].innerHTML = `${getTitle.value}`
-
-// <p>empty for space?</p>
-
-// set <p>[3].innerHTML = `<strong>o:<strong> 800-918-8924 x${getExtension.value}`
-
-// set <p>[4].innerHTML = `<strong>e:<strong> ${getEmail.value}`
-
-// set <p>[5].innerHTML = `${setAddress(getLocation.value)}`
-// use a switch?
-
-// toggle <a><img>eviCore Logo</img></a> Image Link
-
-// set <a href="https://www.evicore.com">evicore.com</a>
+const copyToClipboard = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
