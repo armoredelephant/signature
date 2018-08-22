@@ -33,7 +33,7 @@ submitBtn.addEventListener('click', () => {
                             address +
                             "<br>" +
                             "<br>" +
-                            "<a href=\"http://www.evicore.com\"><img src=\"https://www.carecorenational.com/emails/evicore.jog\" width=\"233\" height=\"87\" /></a>" +
+                            "<a href=\"http://www.evicore.com\"><img src=\"https://www.carecorenational.com/emails/evicore.jpg\" width=\"233\" height=\"87\" /></a>" +
                             "<br>" +
                             "<br>" +
                             "<a href=\"http://www.evicore.com\">evicore.com</a>";
