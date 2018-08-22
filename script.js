@@ -1,16 +1,62 @@
-var firstName = document.getElementById('form-first-name');
-var lastName = document.getElementById('form-last-name');
-var getEmail = document.getElementById('form-email');
-var getExtension = document.getElementById('form-extension');
-var getLocation = document.getElementById('location-select');
-var getTitle = document.getElementById('form-title');
-var modalClose = document.getElementById('modal-copy-button');
-var modalPara = document.querySelectorAll('.modal-p');
+const firstName = document.getElementById('form-first-name');
+const lastName = document.getElementById('form-last-name');
+const getEmail = document.getElementById('form-email');
+const getExtension = document.getElementById('form-extension');
+const getLocation = document.getElementById('location-select');
+const getTitle = document.getElementById('form-title');
+const modalClose = document.getElementById('modal-copy-button');
+const modalPara = document.querySelectorAll('.modal-p');
+const submitBtn = document.getElementById('submit-button');
 
-modalClose.addEventListener('click', () => {
-    for (let para of modalPara) {
-        para.innerHTML = `test`;
-    } 
+submitBtn.addEventListener('click', () => {
+    const office = checkSite(getLocation.value);
+    modalPara[0].innerHTML = `<strong>${firstName.value} ${lastName.value}</strong>
+                                <br>
+                                ${getTitle.value}
+                                <br>
+                                <br>
+                                <strong>o:</strong> 800-918-8924 x ${getExtension.value}
+                                <br>
+                                <strong>e:</strong> ${getEmail.value}
+                                <br>
+                                <br>
+                                ${office}
+                                <br>
+                                <br>
+                                <a href="http://www.evicore.com"><img src="https://www.carecorenational.com/emails/evicore.jpg" width="233" height="87"/></a>
+                                <br>
+                                <br>
+                                <a href="http://www.evicore.com">evicore.com</a>
+                                `;
+                                
+    function checkSite(site) {
+        let officeLocal = '';
+        switch (site) {
+            case 'CA':
+            officeLocal = "1610 Arden Way, Suite 280 Sacramento, CA 95815";
+            break;
+            case 'CO':
+            officeLocal = "1575 Garden of the Gods Rd., #200 Colorado Springs, CO 80907";
+            break;
+            case 'CT':
+            officeLocal = "80 Springs Lane Plainville, CT 06062";
+            break;
+            case 'FL':
+            officeLocal = "1420 S. Babcock St. Melbourne, FL 32901";
+            break;
+            case 'MO':
+            officeLocal = "1 Express Way St. Louis, MO 63121";
+            break;
+            case 'SC':
+            officeLocal = "400 Buckwalter Place Blvd. Bluffton, SC 29910";
+            case 'TN':
+            officeLocal = "730 Cool Springs Blvd., Suite 800 Franklin, TN 37067";
+            break;
+            default:
+            officeLocal = "400 Buckwalter Place Blvd. Bluffton, SC 29910"
+        }
+        return officeLocal
+    }
 });
 
 
