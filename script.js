@@ -1,36 +1,65 @@
-const firstName = document.getElementById('form-first-name');
-const lastName = document.getElementById('form-last-name');
-const getEmail = document.getElementById('form-email');
-const getExtension = document.getElementById('form-extension');
-const getLocation = document.getElementById('location-select');
-const getTitle = document.getElementById('form-title');
-const modalCopy = document.getElementById('modal-copy-button');
-const modalPara = document.querySelector('.modal-p');
-const submitBtn = document.getElementById('submit-button');
+var firstName = document.getElementById('form-first-name');
+var lastName = document.getElementById('form-last-name');
+var getEmail = document.getElementById('form-email');
+var getExtension = document.getElementById('form-extension');
+var getLocation = document.getElementById('location-select');
+var getTitle = document.getElementById('form-title');
+var modalCopy = document.getElementById('modal-copy-button');
+var modalPara = document.querySelector('.modal-p');
+var submitBtn = document.getElementById('submit-button');
 
 submitBtn.addEventListener('click', () => {
-    const address = checkLocation(getLocation.value);
-    modalPara.innerHTML = `<strong>${firstName.value} ${lastName.value}</strong>
-                                <br>
-                                ${getTitle.value}
-                                <br>
-                                <br>
-                                <strong>o:</strong> 800-918-8924 x${getExtension.value}
-                                <br>
-                                <strong>e:</strong> ${getEmail.value}
-                                <br>
-                                <br>
-                                ${address}
-                                <br>
-                                <br>
-                                <a href="http://www.evicore.com"><img src="https://www.carecorenational.com/emails/evicore.jpg" width="233" height="87"/></a>
-                                <br>
-                                <br>
-                                <a href="http://www.evicore.com">evicore.com</a>
-                                `;
+
+    var address = checkLocation(getLocation.value);
+    var first = firstName.value;
+    var last = lastName.value;
+    var title = getTitle.value;
+    var ext = getExtension.value;
+    var email = getEmail.value;
+
+    // modalPara.style.color = "#002855";
+    // modalPara.style.fontFamily = "arial";
+    // modalPara.style.fontSize = "12px";
+    modalPara.innerHTML = "<strong>" + first + " " + last + "</strong>" +
+                            "<br>" +
+                            title +
+                            "<br>" +
+                            "<br>" +
+                            "<strong>o:</strong> 800.918.8924 x" + ext +
+                            "<br>" +
+                            "<strong>e:</strong> " + email +
+                            "<br>" +
+                            "<br>" +
+                            address +
+                            "<br>" +
+                            "<br>" +
+                            "<a href=\"http://www.evicore.com\"><img src=\"https://www.carecorenational.com/emails/evicore.jog\" width=\"233\" height=\"87\" /></a>" +
+                            "<br>" +
+                            "<br>" +
+                            "<a href=\"http://www.evicore.com\">evicore.com</a>";
+ 
+
+    // modalPara.innerHTML = `<strong>${firstName.value} ${lastName.value}</strong>
+    //                             <br>
+    //                             ${getTitle.value}
+    //                             <br>
+    //                             <br>
+    //                             <strong>o:</strong> 800-918-8924 x${getExtension.value}
+    //                             <br>
+    //                             <strong>e:</strong> ${getEmail.value}
+    //                             <br>
+    //                             <br>
+    //                             ${address}
+    //                             <br>
+    //                             <br>
+    //                             <a href="http://www.evicore.com"><img src="https://www.carecorenational.com/emails/evicore.jpg" width="233" height="87"/></a>
+    //                             <br>
+    //                             <br>
+    //                             <a href="http://www.evicore.com">evicore.com</a>
+    //                             `;
 
     function checkLocation(site) {
-        let officeLocal = '';
+        var officeLocal = '';
         switch (site) {
             case 'CA':
             officeLocal = "1610 Arden Way, Suite 280 &#149 Sacramento, CA 95815";
@@ -59,18 +88,18 @@ submitBtn.addEventListener('click', () => {
     }
 });
 
-modalCopy.addEventListener('click', () => {
-    copyToClipboard(modalPara.innerHTML);
-});
+// modalCopy.addEventListener('click', () => {
+//     copyToClipboard(modalPara.innerHTML);
+// });
 
-const copyToClipboard = str => {
-  const el = document.createElement('textarea');
-  el.value = str;
-  el.setAttribute('readonly', '');
-  el.style.position = 'absolute';
-  el.style.left = '-9999px';
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand('copy');
-  document.body.removeChild(el);
-};
+// const copyToClipboard = str => {
+//   const el = document.createElement('textarea');
+//   el.value = str;
+//   el.setAttribute('readonly', '');
+//   el.style.position = 'absolute';
+//   el.style.left = '-9999px';
+//   document.body.appendChild(el);
+//   el.select();
+//   document.execCommand('copy');
+//   document.body.removeChild(el);
+// };
