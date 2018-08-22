@@ -9,7 +9,7 @@ const modalPara = document.querySelectorAll('.modal-p');
 const submitBtn = document.getElementById('submit-button');
 
 submitBtn.addEventListener('click', () => {
-    const office = checkSite(getLocation.value);
+    const address = checkLocation(getLocation.value);
     modalPara[0].innerHTML = `<strong>${firstName.value} ${lastName.value}</strong>
                                 <br>
                                 ${getTitle.value}
@@ -20,7 +20,7 @@ submitBtn.addEventListener('click', () => {
                                 <strong>e:</strong> ${getEmail.value}
                                 <br>
                                 <br>
-                                ${office}
+                                ${address}
                                 <br>
                                 <br>
                                 <a href="http://www.evicore.com"><img src="https://www.carecorenational.com/emails/evicore.jpg" width="233" height="87"/></a>
@@ -28,8 +28,8 @@ submitBtn.addEventListener('click', () => {
                                 <br>
                                 <a href="http://www.evicore.com">evicore.com</a>
                                 `;
-                                
-    function checkSite(site) {
+
+    function checkLocation(site) {
         let officeLocal = '';
         switch (site) {
             case 'CA':
