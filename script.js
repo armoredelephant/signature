@@ -8,7 +8,7 @@ var modalCopy = document.getElementById('modal-copy-button');
 var modalPara = document.querySelector('.modal-p');
 var submitBtn = document.getElementById('submit-button');
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', function() {
 
     var address = checkLocation(getLocation.value);
     var first = firstName.value;
