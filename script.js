@@ -78,6 +78,7 @@ submitBtn.addEventListener('click', function() {
             break;
             case 'SC':
             officeLocal = "400 Buckwalter Place Blvd. &#149 Bluffton, SC 29910";
+            break;
             case 'TN':
             officeLocal = "730 Cool Springs Blvd., Suite 800 &#149 Franklin, TN 37067";
             break;
