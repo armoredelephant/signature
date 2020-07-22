@@ -9,3 +9,5 @@ This was the first web app that I developed. I utilized bootstrap & javascript t
 * Bootstrap
 * Vanilla Javascript
 
+![Signature demo](demo/demo.gif)
+
